@@ -102,8 +102,8 @@ body{
 }
 .card-media img{
   display:block;
-  max-width:80%;            /* ajusta el tamaño sin afectar textos */
-  max-height:80%;
+  max-width:40%;            /* ajusta el tamaño sin afectar textos */
+  max-height:40%;
   object-fit:contain;       /* conserva proporciones */
   margin:auto;
 }
