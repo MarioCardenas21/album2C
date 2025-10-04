@@ -91,7 +91,7 @@ body{
 
 /* --- MEDIA de la tarjeta (corregido) --- */
 .card-media{
-  height:140px;
+  height:70px;
   display:flex;
   align-items:center;
   justify-content:center;
