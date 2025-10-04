@@ -4,7 +4,7 @@
   --muted:#8b93a7;
   --text:#e9edf6;
   --accent:#6ee7ff;
-  --ring: #2a354f;
+  --ring:#2a354f;
   --ok:#16a34a;
   --danger:#dc2626;
 
@@ -25,16 +25,16 @@
 html,body{height:100%}
 body{
   margin:0;
-  background:linear-gradient(180deg, #0b0d12 0%, #0f1320 100%);
+  background:linear-gradient(180deg,#0b0d12 0%,#0f1320 100%);
   color:var(--text);
-  font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 /* Header */
 .app-header{
   position:sticky; top:0; z-index:50;
   display:flex; align-items:center; justify-content:space-between;
-  padding:16px clamp(16px, 4vw, 32px);
+  padding:16px clamp(16px,4vw,32px);
   background:rgba(11,13,18,.7);
   backdrop-filter:saturate(140%) blur(8px);
   border-bottom:1px solid var(--ring);
@@ -44,7 +44,7 @@ body{
 .brand h1{margin:0; font-size:20px}
 .brand p{margin:0; color:var(--muted); font-size:12px}
 .search input{
-  width:min(560px, 70vw); padding:10px 12px; border-radius:10px;
+  width:min(560px,70vw); padding:10px 12px; border-radius:10px;
   background:#0f1420; border:1px solid var(--ring); color:var(--text);
   outline:none;
 }
@@ -53,9 +53,9 @@ body{
 /* Categorías */
 .categories{
   display:flex; gap:8px; flex-wrap:wrap;
-  padding:12px clamp(16px, 4vw, 32px);
+  padding:12px clamp(16px,4vw,32px);
   border-bottom:1px solid var(--ring);
-  background:linear-gradient(180deg, rgba(17,21,33,.85), rgba(17,21,33,.55));
+  background:linear-gradient(180deg,rgba(17,21,33,.85),rgba(17,21,33,.55));
 }
 .cat-chip{
   display:inline-flex; align-items:center; gap:8px;
@@ -68,7 +68,7 @@ body{
 .cat-chip .count{color:var(--muted); font-size:12px}
 
 /* Main */
-.container{padding:24px clamp(16px, 4vw, 32px)}
+.container{padding:24px clamp(16px,4vw,32px)}
 .toolbar{
   display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:16px;
 }
@@ -81,16 +81,15 @@ body{
 /* Grid */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns:repeat(auto-fill, minmax(260px,1fr));
   gap:16px;
 }
 .card{
   background:var(--panel); border:1px solid var(--ring); border-radius:14px; overflow:hidden;
   display:flex; flex-direction:column;
 }
-.card-media{
-  height:140px; display:grid; place-items:center; background:#0f1420; border-bottom:1px solid var(--ring);
-}
+
+/* --- MEDIA de la tarjeta (corregido) --- */
 .card-media{
   height:140px;
   display:flex;
@@ -98,10 +97,19 @@ body{
   justify-content:center;
   background:#0f1420;
   border-bottom:1px solid var(--ring);
-  overflow:hidden;           /* evita que la imagen se desborde */
+  overflow:hidden;          /* evita desbordes */
   position:relative;
 }
-.card-media svg{width:100%; height:100%}
+.card-media img{
+  display:block;
+  max-width:80%;            /* ajusta el tamaño sin afectar textos */
+  max-height:80%;
+  object-fit:contain;       /* conserva proporciones */
+  margin:auto;
+}
+.card-media svg{width:100%; height:100%; object-fit:cover}
+
+/* Cuerpo */
 .card-body{padding:14px; display:flex; flex-direction:column; gap:8px}
 .card-title{display:flex; justify-content:space-between; gap:8px}
 .card-title h3{margin:0; font-size:15px}
@@ -110,24 +118,25 @@ body{
 .desc{color:var(--muted)}
 .meta{color:var(--muted); font-size:12px}
 
+/* Acciones */
 .card-actions{
   margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:8px; padding:12px 14px;
   border-top:1px solid var(--ring); background:#0f1420;
 }
 .tag{padding:2px 8px; border-radius:999px; border:1px dashed var(--ring); font-size:12px}
-.btn, .ghost, .primary, .icon-btn{
+.btn,.ghost,.primary,.icon-btn{
   padding:8px 12px; border-radius:10px; border:1px solid var(--ring);
   background:#141a29; color:var(--text); cursor:pointer;
 }
 .btn:hover,.ghost:hover,.primary:hover,.icon-btn:hover{filter:brightness(1.1)}
-.primary{border-color:transparent; background:linear-gradient(90deg, #22d3ee, #818cf8)}
+.primary{border-color:transparent; background:linear-gradient(90deg,#22d3ee,#818cf8)}
 .ghost{background:transparent}
 
 /* Compare bar */
 .compare-bar{
   position:sticky; bottom:0; z-index:40;
   display:flex; gap:12px; align-items:center; justify-content:space-between;
-  padding:10px clamp(16px, 4vw, 32px);
+  padding:10px clamp(16px,4vw,32px);
   background:rgba(17,21,33,.9); border-top:1px solid var(--ring); backdrop-filter:blur(8px);
 }
 .compare-info{display:flex; gap:10px; align-items:center}
@@ -136,12 +145,12 @@ body{
   display:flex; align-items:center; gap:8px;
   padding:6px 10px; border:1px solid var(--ring); border-radius:999px; background:#0f1420; font-size:12px;
 }
-.compare-pill img, .compare-pill svg{width:18px; height:18px}
+.compare-pill img,.compare-pill svg{width:18px; height:18px}
 .compare-pill button{background:transparent; border:none; color:var(--muted); cursor:pointer}
 
 /* Modal */
 .modal{
-  width:min(1100px, 96vw); border:none; border-radius:14px; padding:0; overflow:hidden;
+  width:min(1100px,96vw); border:none; border-radius:14px; padding:0; overflow:hidden;
   background:var(--panel); color:var(--text);
 }
 .modal::backdrop{background:rgba(0,0,0,.6)}
@@ -151,16 +160,14 @@ body{
 
 .table-wrap{width:100%; overflow:auto; border:1px solid var(--ring); border-radius:10px}
 .compare-table{width:100%; border-collapse:collapse}
-.compare-table th, .compare-table td{
+.compare-table th,.compare-table td{
   border-bottom:1px solid var(--ring); padding:10px; text-align:left; vertical-align:top;
 }
 .compare-table thead th{position:sticky; top:0; background:#0f1420}
 .compare-table tbody tr:hover{background:#13192a}
 
 /* Footer */
-.app-footer{
-  padding:32px; text-align:center; color:var(--muted)
-}
+.app-footer{padding:32px; text-align:center; color:var(--muted)}
 
 /* Helpers */
 .hidden{display:none}
