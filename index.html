@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111521" />
+  <title>PC Parts Catalog + Comparador</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* mini estado de carga (opcional) */
+    .loading{padding:16px;color:#8b93a7}
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo">🧩</span>
+      <div>
+        <h1>PC Parts Catalog</h1>
+        <p>Busca, filtra y compara componentes</p>
+      </div>
+    </div>
+
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Buscar por nombre, marca o detalle…" />
+    </div>
+  </header>
+
+  <nav class="categories" id="categoriesNav">
+    <!-- Se genera desde app.js -->
+  </nav>
+
+  <main class="container">
+    <div class="toolbar">
+      <div class="result-info" id="resultInfo"> <span class="loading">Cargando datos…</span> </div>
+      <div class="sort">
+        <label for="sortSelect">Ordenar:</label>
+        <select id="sortSelect">
+          <option value="relevance">Relevancia</option>
+          <option value="price-asc">Precio ↑</option>
+          <option value="price-desc">Precio ↓</option>
+          <option value="brand-asc">Marca A–Z</option>
+          <option value="name-asc">Nombre A–Z</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="grid" id="cardsGrid">
+      <!-- Tarjetas generadas por app.js -->
+    </section>
+  </main>
+
+  <!-- Barra de comparación -->
+  <aside class="compare-bar" id="compareBar">
+    <div class="compare-info">
+      <strong>Comparar</strong>
+      <span id="compareCount">0 seleccionados</span>
+      <span id="compareCategory"></span>
+    </div>
+    <div class="compare-list" id="compareList"></div>
+    <div class="compare-actions">
+      <button id="btnClearCompare" class="ghost">Limpiar</button>
+      <button id="btnOpenCompare" class="primary" disabled>Comparar</button>
+    </div>
+  </aside>
+
+  <!-- Modal de comparación -->
+  <dialog id="compareModal" class="modal">
+    <div class="modal-header">
+      <h3>Comparación</h3>
+      <button id="btnCloseModal" class="icon-btn" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="table-wrap">
+        <table id="compareTable" class="compare-table"></table>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="app-footer">
+    Hecho con ❤️ · Placeholders vía <code>placeholderSVG(label, color)</code>
+  </footer>
+
+  <noscript>
+    <p style="padding:16px;color:#fca5a5;background:#111521;border-top:1px solid #2a354f;">
+      Esta aplicación necesita JavaScript para funcionar. Actívalo para continuar.
+    </p>
+  </noscript>
+
+  <!-- Carga de la app. app.js hará fetch('app-data.json') -->
+  <script src="app.js" defer></script>
+</body>
+</html>
