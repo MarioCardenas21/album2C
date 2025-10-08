@@ -13,8 +13,8 @@
   },
   "products": [
     { "category":"CPU","name":"Ryzen 9 7950X","brand":"AMD","price":699,"description":"16C/32T, AM5, alto rendimiento creador/gaming.","details":"Boost 5.7GHz · 170W TDP · PCIe 5.0 · DDR5","image":"img/cpu/ryzen9.jpeg" },
-    { "category":"CPU","name":"Core i9-14900K","brand":"Intel","price":679,"description":"24C híbridos (8P+16E), tope de gama LGA1700.","details":"Turbo 6.0GHz · UHD 770 · DDR5/DDR4","image":null },
-    { "category":"CPU","name":"Ryzen 7 7800X3D","brand":"AMD","price":449,"description":"Gaming con 3D V-Cache.","details":"8C/16T · 104MB caché · AM5","image":null },
+    { "category":"CPU","name":"Core i9-14900K","brand":"Intel","price":679,"description":"24C híbridos (8P+16E), tope de gama LGA1700.","details":"Turbo 6.0GHz · UHD 770 · DDR5/DDR4","image":"img/cpu/i914.jpg" },
+    { "category":"CPU","name":"Ryzen 7 7800X3D","brand":"AMD","price":449,"description":"Gaming con 3D V-Cache.","details":"8C/16T · 104MB caché · AM5","image":"img/cpu/AMDRyzen77800X3D.jpg" },
     { "category":"CPU","name":"Core i7-14700KF","brand":"Intel","price":419,"description":"Gran multi-tarea sin iGPU.","details":"20C (8P+12E) · Turbo 5.6GHz · LGA1700","image":null },
     { "category":"CPU","name":"Ryzen 5 7600","brand":"AMD","price":249,"description":"6C/12T balanceado para gaming 1080p/1440p.","details":"Boost 5.1GHz · AM5 · DDR5","image":null },
     { "category":"CPU","name":"Core i5-14600K","brand":"Intel","price":329,"description":"Excelente relación precio/rendimiento.","details":"14C (6P+8E) · Turbo 5.3GHz · LGA1700","image":null },
