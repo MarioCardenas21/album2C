@@ -30,7 +30,7 @@
     { "category":"GPU","name":"Radeon RX 7800 XT","brand":"AMD","price":599,"description":"1440p excelente valor.","details":"16GB GDDR6","image":"img/gpu/AMD RX 7800 XT – AMD.jpg" },
     { "category":"GPU","name":"Intel Arc A770 16GB","brand":"Intel","price":349,"description":"Precio/performance competitivo con AV1.","details":"Xe HPG · XMX · AV1 encode","image":"img/gpu/Intel Arc A770.jpg" },
     { "category":"GPU","name":"GeForce RTX 4060 Ti 8GB","brand":"NVIDIA","price":399,"description":"1080p alto refresco, DLSS 3.","details":"Ada · DLSS Frame Gen","image":"img/gpu/NVIDIA RTX 4060 Ti – NVIDIA.jpg" },
-    { "category":"GPU","name":"Radeon RX 6600 XT","brand":"AMD","price":299,"description":"1080p alta calidad.","details":"8GB GDDR6 · RDNA2","image":null },
+    { "category":"GPU","name":"Radeon RX 6600 XT","brand":"AMD","price":299,"description":"1080p alta calidad.","details":"8GB GDDR6 · RDNA2","image":"img/gpu/AMD RX 6600 XT.jpg" },
     { "category":"GPU","name":"GeForce RTX 3060 12GB","brand":"NVIDIA","price":249,"description":"1080p estable y VRAM generosa.","details":"12GB GDDR6 · Ampere","image":"img/gpu/NVIDIA RTX 3060 12GB.jpg" },
     { "category":"GPU","name":"Radeon PRO W7900","brand":"AMD","price":3899,"description":"Workstation pro para DCC/CAD.","details":"48GB GDDR6 · ECC","image":"img/gpu/AMD Radeon PRO W7900.jpg" },
 
